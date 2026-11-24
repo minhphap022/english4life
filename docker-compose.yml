@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: english4life-postgres
+    environment:
+      POSTGRES_DB: english4life
+      POSTGRES_USER: english4life
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U english4life -d english4life"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+volumes:
+  pgdata:

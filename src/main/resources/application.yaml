@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: english4life
+  datasource:
+    url: jdbc:postgresql://localhost:5433/english4life
+    username: english4life
+    password: ${POSTGRES_PASSWORD}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info
