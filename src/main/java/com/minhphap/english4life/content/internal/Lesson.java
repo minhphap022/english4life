@@ -26,11 +26,10 @@ public class Lesson {
     protected Lesson() {
     }
 
-    public Lesson(int displayOrder, LessonStatus status, String title, Topic topic) {
-        this.displayOrder = displayOrder;
-        this.status = status;
-        this.title = title;
+    public Lesson(Topic topic, String title, int displayOrder) {
         this.topic = topic;
+        this.title = title;
+        this.displayOrder = displayOrder;
     }
 
     public Long getId() {
@@ -56,4 +55,5 @@ public class Lesson {
     public void publish() {
         this.status = LessonStatus.PUBLISHED;
     }
+
 }

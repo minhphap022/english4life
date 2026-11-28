@@ -25,11 +25,11 @@ public class Sentence {
     protected Sentence() {
     }
 
-    public Sentence(String meaningVi, String textEn, int position, Lesson lesson) {
-        this.meaningVi = meaningVi;
-        this.textEn = textEn;
-        this.position = position;
+    public Sentence(Lesson lesson, int position, String textEn, String meaningVi) {
         this.lesson = lesson;
+        this.position = position;
+        this.textEn = textEn;
+        this.meaningVi = meaningVi;
     }
 
     public String getMeaningVi() {
