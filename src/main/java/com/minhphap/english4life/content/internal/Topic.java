@@ -1,5 +1,6 @@
 package com.minhphap.english4life.content.internal;
 
+import com.minhphap.english4life.content.Level;
 import jakarta.persistence.*;
 
 

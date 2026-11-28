@@ -1,5 +1,6 @@
 package com.minhphap.english4life.content.internal;
 
+import com.minhphap.english4life.content.Level;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
